@@ -1,0 +1,81 @@
+:root {
+  color: #1e293b;
+  background: #eef5f1;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(189, 224, 204, 0.65), transparent 32rem),
+    linear-gradient(135deg, #f6fbf8 0%, #e8f1ee 52%, #dce9ec 100%);
+}
+
+button {
+  font: inherit;
+}
+
+.page {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 24px;
+}
+
+.counterShell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.counterLabel {
+  color: #20323b;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1;
+  min-width: 180px;
+  text-align: center;
+}
+
+.updateButton {
+  min-width: 148px;
+  border: 0;
+  border-radius: 8px;
+  background: #315f65;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 14px 24px;
+  font-size: 18px;
+  font-weight: 700;
+  box-shadow: 0 12px 28px rgba(38, 70, 83, 0.18);
+  transition:
+    background-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.updateButton:hover:not(:disabled) {
+  background: #284f54;
+  box-shadow: 0 16px 34px rgba(38, 70, 83, 0.22);
+  transform: translateY(-1px);
+}
+
+.updateButton:focus-visible {
+  outline: 3px solid rgba(49, 95, 101, 0.35);
+  outline-offset: 4px;
+}
+
+.updateButton:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
